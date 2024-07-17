@@ -4,7 +4,7 @@
 
 <main>
   <app-add-todo (addToDo)="onAddTodo($event)"></app-add-todo>
-  <app-todo-list [todoList]="toDoList"></app-todo-list>
+  <app-todo-list [todoList]="toDoList" (toggleComplete)="onToggleComplete($event)"></app-todo-list>
 </main>
 
 <footer></footer>

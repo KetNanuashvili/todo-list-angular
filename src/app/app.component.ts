@@ -19,5 +19,11 @@ export class AppComponent {
     this.toDoList = [...this.toDoList, item]
   }
 
+  onToggleComplete(changedItems: TodoItem){
+    this.toDoList=this.toDoList.map((item) =>
+      changedItems.id===item.id 
+    ? {...item , isCompleted: !changedItems.isCompleted}: 
+    item);
+  }
 
 }

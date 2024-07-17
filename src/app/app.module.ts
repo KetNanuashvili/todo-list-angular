@@ -7,13 +7,17 @@ import { FormsModule } from '@angular/forms';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { FilterByStatusPipe } from './pipes/filter-by-status.pipe';
+import { StatusHighlightDirective } from './directives/status-highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoItemComponent,
     AddTodoComponent,
-    TodoListComponent
+    TodoListComponent,
+    FilterByStatusPipe,
+    StatusHighlightDirective
   ],
   imports: [
     BrowserModule,
