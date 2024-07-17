@@ -1,0 +1,5 @@
+
+    <div class="todo-item" [ngClass]="{completed: item?.isCompleted}">
+      <h2>{{item?.title}}</h2>
+      <input [checked]="item?.isCompleted" (change)="onToggleComplete()" type="checkbox" >
+    </div>

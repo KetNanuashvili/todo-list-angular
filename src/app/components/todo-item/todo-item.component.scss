@@ -1,0 +1,8 @@
+.todo-item{
+    border: 1px solid black;
+    width: 200px;
+
+    &.completed{
+        text-decoration: line-through;
+    }
+}

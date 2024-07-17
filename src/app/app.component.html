@@ -1,0 +1,10 @@
+<header>
+  <h1>{{title}}</h1>
+</header>
+
+<main>
+  <app-add-todo (addToDo)="onAddTodo($event)"></app-add-todo>
+  <app-todo-list [todoList]="toDoList"></app-todo-list>
+</main>
+
+<footer></footer>
