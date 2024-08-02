@@ -7,23 +7,18 @@ import { TodoItem } from './models/todo.model';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  toDoList: TodoItem[] =[];
+  toDoList: TodoItem[] = [];
   title = 'To do List management app';
 
-  isCompleted: boolean;
-  constructor(){
-
+  onAddTodo(item: TodoItem) {
+    this.toDoList = [...this.toDoList, item];
   }
 
-  onAddTodo(item: TodoItem){
-    this.toDoList = [...this.toDoList, item]
+  onToggleComplete(changedItem: TodoItem) {
+    this.toDoList = this.toDoList.map(item =>
+      item.id === changedItem.id 
+        ? { ...item, isCompleted: !item.isCompleted } 
+        : item
+    );
   }
-
-  onToggleComplete(changedItems: TodoItem){
-    this.toDoList=this.toDoList.map((item) =>
-      changedItems.id===item.id 
-    ? {...item , isCompleted: !changedItems.isCompleted}: 
-    item);
-  }
-
 }

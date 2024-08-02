@@ -34,7 +34,7 @@
 // }
 
 
-import { Component, EventEmitter, Input, Output,  } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TodoItem } from '../../models/todo.model';
 
 @Component({
@@ -42,22 +42,13 @@ import { TodoItem } from '../../models/todo.model';
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss'
 })
-export class TodoListComponent  {
-  @Input () todoList: TodoItem[]=[];
-  @Output () toggleComplete = new EventEmitter();
-  constructor(){
-    
-  }
+export class TodoListComponent {
+  @Input() todoList: TodoItem[] = [];
+  @Output() toggleComplete = new EventEmitter<TodoItem>();
 
-  ngOnInit(): void {
-  
-  }
-  
-  onToggleComplete (item: TodoItem){
+  constructor() {}
+
+  onToggleComplete(item: TodoItem) {
     this.toggleComplete.emit(item);
-
-    
   }
-
-
 }

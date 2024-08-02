@@ -1,5 +1,4 @@
-
-    <div class="todo-item" [appStatusHighlight]="item?.isCompleted">
-      <h2>{{item?.title}}</h2>
-      <input [checked]="item?.isCompleted" (change)="onToggleComplete()" type="checkbox" >
-    </div>
+<div class="todo-item" [appStatusHighlight]="item?.isCompleted">
+  <h2>{{item?.title}}</h2>
+  <input [checked]="item?.isCompleted" (change)="onToggleComplete()" type="checkbox">
+</div>

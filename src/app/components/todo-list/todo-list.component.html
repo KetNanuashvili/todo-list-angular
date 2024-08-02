@@ -19,15 +19,15 @@
   <div class="todo-list">
     <h2>To do</h2>
     <app-todo-item *ngFor="let item of todoList | filterByStatus: false" 
-    [item]="item"
-    (toggleComplete)="onToggleComplete(item)">
+                   [item]="item"
+                   (toggleComplete)="onToggleComplete(item)">
     </app-todo-item>
   </div> 
   <div class="todo-list">
     <h2>Done</h2>
     <app-todo-item *ngFor="let item of todoList | filterByStatus: true" 
-    [item]="item"
-    (toggleComplete)="onToggleComplete(item)">
+                   [item]="item"
+                   (toggleComplete)="onToggleComplete(item)">
     </app-todo-item>
   </div> 
 </div>

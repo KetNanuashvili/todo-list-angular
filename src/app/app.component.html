@@ -1,10 +1,15 @@
-<header>
-  <h1>{{title}}</h1>
-</header>
+<mat-toolbar color="primary">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+</mat-toolbar>
 
 <main>
-  <app-add-todo (addToDo)="onAddTodo($event)"></app-add-todo>
-  <app-todo-list [todoList]="toDoList" (toggleComplete)="onToggleComplete($event)"></app-todo-list>
+  <!-- <app-add-todo (addToDo)="onAddTodo($event)"></app-add-todo>
+  <app-todo-list [todoList]="toDoList" (toggleComplete)="onToggleComplete($event)"></app-todo-list> -->
+  <app-app-product></app-app-product>
+  <hr/>
+  <app-listing></app-listing>
 </main>
 
 <footer></footer>
